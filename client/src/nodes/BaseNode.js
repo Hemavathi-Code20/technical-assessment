@@ -8,8 +8,8 @@ export default function BaseNode({ id, data }) {
     color = '#1C2536',
     bg = '#ffffff',
     border = '#e5e7eb',
-    fields = [], // [{ key, label, type, value, placeholder, onChange }]
-    handles = { inputs: [], outputs: [] }, // [{ id, top? }]
+    fields = [], 
+    handles = { inputs: [], outputs: [] }, 
   } = data || {};
 
   return (

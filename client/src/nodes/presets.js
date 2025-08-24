@@ -55,7 +55,7 @@ export const nodePresets = {
     handles: { inputs: [{ id: 'value' }], outputs: [] },
   },
 
-  // -------- Five new nodes (config-only) --------
+  //Five new nodes
   http: {
     title: 'HTTP Request',
     color: '#075985',

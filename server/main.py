@@ -5,16 +5,14 @@ from typing import List
 
 app = FastAPI()
 
-# ✅ Allow frontend (React at :3000) to talk to backend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React dev server
+    allow_origins=["http://localhost:3000"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# -------- Data Models --------
 class Edge(BaseModel):
     source: str
     target: str
@@ -23,7 +21,6 @@ class Pipeline(BaseModel):
     nodes: List[dict]
     edges: List[Edge]
 
-# -------- Routes --------
 @app.get("/")
 def read_root():
     return {"Ping": "Pong"}

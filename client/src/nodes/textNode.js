@@ -1,7 +1,6 @@
-// /frontend/src/nodes/textNode.js
 import { useState, useEffect } from "react";
 import { Handle, Position } from "reactflow";
-import "../styles/nodes.css"; // ✅ reuse the unified styles
+import "../styles/nodes.css"; 
 
 export const TextNode = ({ id, data }) => {
   const [text, setText] = useState(data?.text || "");
@@ -45,7 +44,6 @@ export const TextNode = ({ id, data }) => {
       </div>
 
       <div className="vs-node-body">
-        {/* Text Input */}
         <textarea
           value={text}
           onChange={handleChange}

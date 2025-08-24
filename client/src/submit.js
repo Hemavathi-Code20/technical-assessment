@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useStore } from "./store";
-import "./styles/nodes.css"; // ✅ reuse styling system
+import "./styles/nodes.css"; 
 
 export const SubmitButton = () => {
   const nodes = useStore((s) => s.nodes);

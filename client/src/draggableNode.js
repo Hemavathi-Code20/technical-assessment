@@ -1,4 +1,3 @@
-// draggableNode.js
 import "./styles/nodes.css";
 
 export const DraggableNode = ({ type, label }) => {
