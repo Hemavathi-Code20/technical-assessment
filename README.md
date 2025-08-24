@@ -8,19 +8,11 @@ This project has two parts:
 
 ## 🚀 Getting Started
 
-### 1. Clone the Repository
-```bash
-git clone <technical_assessment>
-cd <client>
-
-```
-
-### 2. Run the Frontend (React)
+### Run the Frontend (React)
 ```bash
 cd client
 npm install
 npm start
-
 ```
 #### The app will run at: http://localhost:3000
 
@@ -28,7 +20,6 @@ npm start
 ```bash
 cd server
 uvicorn main:app --reload
-
 ```
 #### The backend will run at: http://localhost:8000
 
