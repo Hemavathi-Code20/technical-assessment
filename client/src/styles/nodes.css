@@ -1,0 +1,122 @@
+/* --- General Node Styling --- */
+.vs-node {
+  min-width: 220px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 12px;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.vs-node:hover {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Header inside node */
+.vs-node-header {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.vs-node-title {
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.vs-node-subtitle {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Node body */
+.vs-node-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Form fields */
+.vs-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vs-label {
+  font-size: 12px;
+  color: #374151;
+}
+
+.vs-input {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+.vs-input:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* --- Draggable Node Styling --- */
+.vs-draggable {
+  cursor: grab;
+  min-width: 90px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border-radius: 10px;
+  background-color: #1c2536;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.vs-draggable:active {
+  cursor: grabbing;
+  transform: scale(0.96);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+/* --- Submit Button --- */
+.vs-submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.vs-submit-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.vs-submit-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.vs-submit-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4);
+}
