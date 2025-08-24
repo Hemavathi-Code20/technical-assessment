@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useCallback } from 'react';
 import { useStore } from '../store';
 import BaseNode from './BaseNode';
 import { nodePresets } from './presets';
@@ -7,11 +7,16 @@ export default function GenericNode({ id, data, type }) {
   const updateNodeField = useStore((s) => s.updateNodeField);
   const preset = nodePresets[type] || nodePresets.customInput;
 
-  const update = (key, value) => updateNodeField(id, key, value);
+  const update = useCallback(
+    (key, value) => updateNodeField(id, key, value),
+    [id, updateNodeField] // ✅ stable dependencies
+  );
 
   const fields = useMemo(() => {
-    return preset.fieldsFactory ? preset.fieldsFactory({ ...data, id }, update) : [];
-  }, [data]);
+    return preset.fieldsFactory
+      ? preset.fieldsFactory({ ...data, id }, update)
+      : [];
+  }, [data, id, preset, update]); // ✅ include stable update
 
   return (
     <BaseNode

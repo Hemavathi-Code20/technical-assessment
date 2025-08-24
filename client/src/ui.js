@@ -67,7 +67,7 @@ export const PipelineUI = () => {
       position,
       data: getInitNodeData(nodeID, type),
     });
-  }, [reactFlowInstance]);
+  }, [reactFlowInstance, getNodeID, addNode]); // ✅ added missing dependencies
 
   const onDragOver = useCallback((e) => {
     e.preventDefault();
@@ -97,4 +97,3 @@ export const PipelineUI = () => {
     </div>
   );
 };
-
