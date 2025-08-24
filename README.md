@@ -32,14 +32,4 @@ uvicorn main:app --reload
 ```
 #### The backend will run at: http://localhost:8000
 
-## ✅ How to Use
-
- Open http://localhost:3000
- Drag and drop nodes to build a pipeline
- Click Submit
- An alert will show:
- Number of nodes
- Number of edges
- Whether the pipeline is a DAG
-
 
